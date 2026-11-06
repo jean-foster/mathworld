@@ -1,0 +1,28 @@
+window.BANKS = window.BANKS || {};
+window.BANKS["Простые задачи на умножение"] = [
+    { id: 301, text: "В 3 коробках лежит по 4 маркера. Сколько маркеров во всех коробках?", answer: 12, answerLabel: "маркеров", actions: [{ left: 3, op: "·", right: 4, result: 12 }] },
+    { id: 302, text: "У одного паука 8 лапок. Сколько лапок у 5 пауков?", answer: 40, answerLabel: "лапок", actions: [{ left: 5, op: "·", right: 8, result: 40 }] },
+    { id: 303, text: "На 4 полках стоит по 6 книг. Сколько всего книг на этих полках?", answer: 24, answerLabel: "книг", actions: [{ left: 4, op: "·", right: 6, result: 24 }] },
+    { id: 304, text: "В одном букете 7 гвоздик. Сколько гвоздик в 3 таких букетах?", answer: 21, answerLabel: "гвоздик", actions: [{ left: 3, op: "·", right: 7, result: 21 }] },
+    { id: 305, text: "У велосипеда 2 колеса. Сколько колёс у 8 велосипедов?", answer: 16, answerLabel: "колёс", actions: [{ left: 8, op: "·", right: 2, result: 16 }] },
+    { id: 306, text: "В 6 упаковках по 5 йогуртов. Сколько всего йогуртов в этих упаковках?", answer: 30, answerLabel: "йогуртов", actions: [{ left: 6, op: "·", right: 5, result: 30 }] },
+    { id: 307, text: "В одном альбоме 9 листов. Сколько листов в 4 таких альбомах?", answer: 36, answerLabel: "листов", actions: [{ left: 4, op: "·", right: 9, result: 36 }] },
+    { id: 308, text: "В 7 рядов посадили по 8 кустов сирени. Сколько всего кустов сирени посадили?", answer: 56, answerLabel: "кустов", actions: [{ left: 7, op: "·", right: 8, result: 56 }] },
+    { id: 309, text: "В одном стручке 6 горошин. Сколько горошин в 8 таких стручках?", answer: 48, answerLabel: "горошин", actions: [{ left: 8, op: "·", right: 6, result: 48 }] },
+    { id: 310, text: "В 5 банок налили по 3 литра сока. Сколько литров сока во всех банках?", answer: 15, answerLabel: "литров", actions: [{ left: 5, op: "·", right: 3, result: 15 }] },
+    { id: 311, text: "На 9 тарелок положили по 4 пирожка. Сколько пирожков на всех тарелках?", answer: 36, answerLabel: "пирожков", actions: [{ left: 9, op: "·", right: 4, result: 36 }] },
+    { id: 312, text: "В одном автобусе 10 окон. Сколько окон в 7 таких автобусах?", answer: 70, answerLabel: "окон", actions: [{ left: 7, op: "·", right: 10, result: 70 }] },
+    { id: 313, text: "У одной ели 5 ярусов веток. Сколько ярусов у 9 таких елей?", answer: 45, answerLabel: "ярусов", actions: [{ left: 9, op: "·", right: 5, result: 45 }] },
+    { id: 314, text: "Одна ручка стоит 8 рублей. Сколько рублей стоят 6 таких ручек?", answer: 48, answerLabel: "рублей", actions: [{ left: 6, op: "·", right: 8, result: 48 }] },
+    { id: 315, text: "В 4 коробки разложили по 9 шаров. Сколько всего шаров в этих коробках?", answer: 36, answerLabel: "шаров", actions: [{ left: 4, op: "·", right: 9, result: 36 }] },
+    { id: 316, text: "На 3 клумбах растёт по 7 тюльпанов. Сколько тюльпанов на всех клумбах?", answer: 21, answerLabel: "тюльпанов", actions: [{ left: 3, op: "·", right: 7, result: 21 }] },
+    { id: 317, text: "В одном купе поезда 4 места. Сколько мест в 8 таких купе?", answer: 32, answerLabel: "мест", actions: [{ left: 8, op: "·", right: 4, result: 32 }] },
+    { id: 318, text: "В 5 пакетов насыпали по 6 кг картофеля. Сколько картофеля во всех пакетах?", answer: 30, answerLabel: "кг", actions: [{ left: 5, op: "·", right: 6, result: 30 }] },
+    { id: 319, text: "Один блокнот стоит 9 рублей. Сколько стоят 5 таких блокнотов?", answer: 45, answerLabel: "рублей", actions: [{ left: 5, op: "·", right: 9, result: 45 }] },
+    { id: 320, text: "В одном ряду 8 стульев. Сколько стульев в 7 таких рядах?", answer: 56, answerLabel: "стульев", actions: [{ left: 7, op: "·", right: 8, result: 56 }] },
+    { id: 321, text: "У 6 столов по 4 ножки. Сколько ножек у всех этих столов?", answer: 24, answerLabel: "ножек", actions: [{ left: 6, op: "·", right: 4, result: 24 }] },
+    { id: 322, text: "В одной неделе 7 дней. Сколько дней в 6 неделях?", answer: 42, answerLabel: "дней", actions: [{ left: 6, op: "·", right: 7, result: 42 }] },
+    { id: 323, text: "В 8 банок положили по 2 ложки варенья. Сколько ложек варенья во всех банках?", answer: 16, answerLabel: "ложек", actions: [{ left: 8, op: "·", right: 2, result: 16 }] },
+    { id: 324, text: "В одном доме 9 этажей. Сколько этажей в 5 таких домах?", answer: 45, answerLabel: "этажей", actions: [{ left: 5, op: "·", right: 9, result: 45 }] },
+    { id: 325, text: "На 3 куртках по 6 пуговиц. Сколько всего пуговиц на этих куртках?", answer: 18, answerLabel: "пуговиц", actions: [{ left: 3, op: "·", right: 6, result: 18 }] }
+];

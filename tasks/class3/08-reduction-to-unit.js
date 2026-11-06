@@ -1,0 +1,33 @@
+// tasks/class3/08-reduction-to-unit.js
+// Тема: Задачи на приведение к единице
+// Все сюжеты и числа оригинальные.
+
+window.BANKS = window.BANKS || {};
+window.BANKS["Задачи на приведение к единице"] = [
+    { id: 512, text: "На 3 подоконниках стоит 12 горшков с цветами. Сколько горшков стоит на 5 таких подоконниках?", answer: 20, answerLabel: "горшков", actions: [{ left: 12, op: ":", right: 3, result: 4 }, { left: 4, op: "·", right: 5, result: 20 }] },
+    { id: 513, text: "В 4 одинаковых коробках лежат 24 фломастера. Сколько фломастеров в 7 таких коробках?", answer: 42, answerLabel: "фломастеров", actions: [{ left: 24, op: ":", right: 4, result: 6 }, { left: 6, op: "·", right: 7, result: 42 }] },
+    { id: 514, text: "В 5 одинаковых пакетах 15 кг картофеля. Сколько потребуется таких пакетов для 27 кг картофеля?", answer: 9, answerLabel: "пакетов", actions: [{ left: 15, op: ":", right: 5, result: 3 }, { left: 27, op: ":", right: 3, result: 9 }] },
+    { id: 515, text: "В 2 неделях 14 дней. Сколько дней в 6 неделях?", answer: 42, answerLabel: "дней", actions: [{ left: 14, op: ":", right: 2, result: 7 }, { left: 7, op: "·", right: 6, result: 42 }] },
+    { id: 516, text: "В 3 одинаковых наборах 18 листов бумаги. Сколько листов бумаги в 5 таких наборах?", answer: 30, answerLabel: "листов", actions: [{ left: 18, op: ":", right: 3, result: 6 }, { left: 6, op: "·", right: 5, result: 30 }] },
+    { id: 517, text: "В 6 одинаковых упаковках 48 батареек. Сколько упаковок нужно для 64 батареек?", answer: 8, answerLabel: "упаковок", actions: [{ left: 48, op: ":", right: 6, result: 8 }, { left: 64, op: ":", right: 8, result: 8 }] },
+    { id: 518, text: "В 4 ящиках 32 кг апельсинов. Сколько килограммов апельсинов в 6 таких ящиках?", answer: 48, answerLabel: "кг", actions: [{ left: 32, op: ":", right: 4, result: 8 }, { left: 8, op: "·", right: 6, result: 48 }] },
+    { id: 519, text: "За 3 одинаковых блокнота заплатили 45 рублей. Сколько стоят 5 таких блокнотов?", answer: 75, answerLabel: "рублей", actions: [{ left: 45, op: ":", right: 3, result: 15 }, { left: 15, op: "·", right: 5, result: 75 }] },
+    { id: 520, text: "На 4 одинаковых платья пришили 12 пуговиц. Сколько пуговиц потребуется на 7 таких платьев?", answer: 21, answerLabel: "пуговицу", actions: [{ left: 12, op: ":", right: 4, result: 3 }, { left: 3, op: "·", right: 7, result: 21 }] },
+    { id: 521, text: "Из 20 деталей конструктора собирают 4 одинаковые машинки. Сколько деталей нужно для 7 таких машинок?", answer: 35, answerLabel: "деталей", actions: [{ left: 20, op: ":", right: 4, result: 5 }, { left: 5, op: "·", right: 7, result: 35 }] },
+    { id: 522, text: "В 3 одинаковых домах 27 окон. Сколько окон в 5 таких домах?", answer: 45, answerLabel: "окон", actions: [{ left: 27, op: ":", right: 3, result: 9 }, { left: 9, op: "·", right: 5, result: 45 }] },
+    { id: 523, text: "15 роз расставили поровну в 3 вазы. Сколько таких ваз потребуется для 25 роз?", answer: 5, answerLabel: "ваз", actions: [{ left: 15, op: ":", right: 3, result: 5 }, { left: 25, op: ":", right: 5, result: 5 }] },
+    { id: 524, text: "18 литров сока разлили поровну в 6 банок. Сколько таких банок нужно для 30 литров сока?", answer: 10, answerLabel: "банок", actions: [{ left: 18, op: ":", right: 6, result: 3 }, { left: 30, op: ":", right: 3, result: 10 }] },
+    { id: 525, text: "В 5 одинаковых тетрадях 40 листов. Сколько листов в 8 таких же тетрадях?", answer: 64, answerLabel: "листа", actions: [{ left: 40, op: ":", right: 5, result: 8 }, { left: 8, op: "·", right: 8, result: 64 }] },
+    { id: 526, text: "В 4 одинаковых бидонах 36 литров молока. Сколько молока в 7 таких бидонах?", answer: 63, answerLabel: "литра", actions: [{ left: 36, op: ":", right: 4, result: 9 }, { left: 9, op: "·", right: 7, result: 63 }] },
+    { id: 527, text: "Для 5 одинаковых гирлянд нужно 40 лампочек. Сколько лампочек потребуется для 8 таких гирлянд?", answer: 64, answerLabel: "лампочки", actions: [{ left: 40, op: ":", right: 5, result: 8 }, { left: 8, op: "·", right: 8, result: 64 }] },
+    { id: 528, text: "В 6 одинаковых рядах 54 кресла. Сколько кресел в 4 таких рядах?", answer: 36, answerLabel: "кресел", actions: [{ left: 54, op: ":", right: 6, result: 9 }, { left: 9, op: "·", right: 4, result: 36 }] },
+    { id: 529, text: "С 5 одинаковых овец настригли 20 кг шерсти. Сколько овец нужно остричь, чтобы получить 32 кг шерсти?", answer: 8, answerLabel: "овец", actions: [{ left: 20, op: ":", right: 5, result: 4 }, { left: 32, op: ":", right: 4, result: 8 }] },
+    { id: 530, text: "В 4 одинаковых домах 32 подъезда. Сколько подъездов в 7 таких же домах?", answer: 56, answerLabel: "подъездов", actions: [{ left: 32, op: ":", right: 4, result: 8 }, { left: 8, op: "·", right: 7, result: 56 }] },
+    { id: 531, text: "От 3 одинаковых коров надоили за день 45 литров молока. Сколько литров молока надоят от 5 таких коров?", answer: 75, answerLabel: "литров", actions: [{ left: 45, op: ":", right: 3, result: 15 }, { left: 15, op: "·", right: 5, result: 75 }] },
+    { id: 532, text: "На 4 одинаковых этажах 48 окон. Сколько окон на 7 таких этажах?", answer: 84, answerLabel: "окна", actions: [{ left: 48, op: ":", right: 4, result: 12 }, { left: 12, op: "·", right: 7, result: 84 }] },
+    { id: 533, text: "В 5 одинаковых коробках лежало 45 кг печенья. Сколько потребуется коробок для 63 кг печенья?", answer: 7, answerLabel: "коробок", actions: [{ left: 45, op: ":", right: 5, result: 9 }, { left: 63, op: ":", right: 9, result: 7 }] },
+    { id: 534, text: "За 4 минуты станок штампует 80 деталей. Сколько деталей он отштампует за 7 минут?", answer: 140, answerLabel: "деталей", actions: [{ left: 80, op: ":", right: 4, result: 20 }, { left: 20, op: "·", right: 7, result: 140 }] },
+    { id: 535, text: "В 6 одинаковых коробках 42 кг винограда. Сколько килограммов винограда в 5 таких же коробках?", answer: 35, answerLabel: "кг", actions: [{ left: 42, op: ":", right: 6, result: 7 }, { left: 7, op: "·", right: 5, result: 35 }] },
+    { id: 536, text: "За 5 дней турист прошел 100 км, каждый день поровну. Сколько километров он пройдет за 8 дней при той же скорости?", answer: 160, answerLabel: "км", actions: [{ left: 100, op: ":", right: 5, result: 20 }, { left: 20, op: "·", right: 8, result: 160 }] },
+    { id: 537, text: "6 одинаковых ящиков с яблоками весят 72 кг. Сколько весят 9 таких ящиков?", answer: 108, answerLabel: "кг", actions: [{ left: 72, op: ":", right: 6, result: 12 }, { left: 12, op: "·", right: 9, result: 108 }] }
+];            

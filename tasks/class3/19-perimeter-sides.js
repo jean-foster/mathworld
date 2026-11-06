@@ -1,0 +1,28 @@
+window.BANKS = window.BANKS || {};
+window.BANKS["Задачи на нахождение периметра и сторон геометрических фигур"] = [
+    { id: 841, text: "Сторона квадрата равна 4 см. Чему равен его периметр?", answer: 16, answerLabel: "см", actions: [{ left: 4, op: "·", right: 4, result: 16 }] },
+    { id: 842, text: "Длина прямоугольника 6 см, а ширина 3 см. Чему равен периметр?", answer: 18, answerLabel: "см", actions: [{ left: 6, op: "+", right: 3, result: 9 }, { left: 9, op: "·", right: 2, result: 18 }] },
+    { id: 843, text: "Сторона квадрата 7 см. Чему равен его периметр?", answer: 28, answerLabel: "см", actions: [{ left: 7, op: "·", right: 4, result: 28 }] },
+    { id: 844, text: "Ширина прямоугольника 2 см. Чему равна длина, если периметр 12 см?", answer: 4, answerLabel: "см", actions: [{ left: 12, op: ":", right: 2, result: 6 }, { left: 6, op: "−", right: 2, result: 4 }] },
+    { id: 845, text: "Длина прямоугольника 8 см, а ширина 5 см. Чему равен периметр прямоугольника?", answer: 26, answerLabel: "см", actions: [{ left: 8, op: "+", right: 5, result: 13 }, { left: 13, op: "·", right: 2, result: 26 }] },
+    { id: 846, text: "Периметр квадрата 12 см. Чему равна его сторона?", answer: 3, answerLabel: "см", actions: [{ left: 12, op: ":", right: 4, result: 3 }] },
+    { id: 847, text: "Сторона квадрата 9 см. Чему равен его периметр?", answer: 36, answerLabel: "см", actions: [{ left: 9, op: "·", right: 4, result: 36 }] },
+    { id: 848, text: "Ширина прямоугольника 3 см. Чему равна длина, если периметр 14 см?", answer: 4, answerLabel: "см", actions: [{ left: 14, op: ":", right: 2, result: 7 }, { left: 7, op: "−", right: 3, result: 4 }] },
+    { id: 849, text: "Длина прямоугольника 7 см, а ширина на 3 см короче. Чему равен его периметр?", answer: 22, answerLabel: "см", actions: [{ left: 7, op: "−", right: 3, result: 4 }, { left: 7, op: "+", right: 4, result: 11 }, { left: 11, op: "·", right: 2, result: 22 }] },
+    { id: 850, text: "Ширина прямоугольника 6 см, а длина на 2 см больше. Чему равен его периметр?", answer: 28, answerLabel: "см", actions: [{ left: 6, op: "+", right: 2, result: 8 }, { left: 6, op: "+", right: 8, result: 14 }, { left: 14, op: "·", right: 2, result: 28 }] },
+    { id: 851, text: "Ширина прямоугольника 1 см. Чему равна длина, если периметр 10 см?", answer: 4, answerLabel: "см", actions: [{ left: 10, op: ":", right: 2, result: 5 }, { left: 5, op: "−", right: 1, result: 4 }] },
+    { id: 852, text: "Длина прямоугольника 9 см, а ширина 4 см. Чему равен периметр прямоугольника?", answer: 26, answerLabel: "см", actions: [{ left: 9, op: "+", right: 4, result: 13 }, { left: 13, op: "·", right: 2, result: 26 }] },
+    { id: 853, text: "Периметр квадрата 32 см. Чему равна его сторона?", answer: 8, answerLabel: "см", actions: [{ left: 32, op: ":", right: 4, result: 8 }] },
+    { id: 854, text: "Ширина прямоугольника 2 см. Чему равна длина, если периметр 16 см?", answer: 6, answerLabel: "см", actions: [{ left: 16, op: ":", right: 2, result: 8 }, { left: 8, op: "−", right: 2, result: 6 }] },
+    { id: 855, text: "Длина прямоугольника 8 см, а ширина на 2 см короче. Чему равен его периметр?", answer: 28, answerLabel: "см", actions: [{ left: 8, op: "−", right: 2, result: 6 }, { left: 8, op: "+", right: 6, result: 14 }, { left: 14, op: "·", right: 2, result: 28 }] },
+    { id: 856, text: "Ширина прямоугольника 7 см, а длина на 3 см больше. Чему равен его периметр?", answer: 34, answerLabel: "см", actions: [{ left: 7, op: "+", right: 3, result: 10 }, { left: 7, op: "+", right: 10, result: 17 }, { left: 17, op: "·", right: 2, result: 34 }] },
+    { id: 857, text: "Длина прямоугольника 6 см. Чему равна ширина, если периметр 20 см?", answer: 4, answerLabel: "см", actions: [{ left: 20, op: ":", right: 2, result: 10 }, { left: 10, op: "−", right: 6, result: 4 }] },
+    { id: 858, text: "Сторона квадрата 2 см. Чему равен его периметр?", answer: 8, answerLabel: "см", actions: [{ left: 2, op: "·", right: 4, result: 8 }] },
+    { id: 859, text: "Длина прямоугольника 7 см, а ширина 2 см. Чему равен периметр прямоугольника?", answer: 18, answerLabel: "см", actions: [{ left: 7, op: "+", right: 2, result: 9 }, { left: 9, op: "·", right: 2, result: 18 }] },
+    { id: 860, text: "Периметр квадрата 4 см. Чему равна его сторона?", answer: 1, answerLabel: "см", actions: [{ left: 4, op: ":", right: 4, result: 1 }] },
+    { id: 861, text: "Ширина прямоугольника 4 см. Чему равна длина, если периметр 18 см?", answer: 5, answerLabel: "см", actions: [{ left: 18, op: ":", right: 2, result: 9 }, { left: 9, op: "−", right: 4, result: 5 }] },
+    { id: 862, text: "Длина прямоугольника 5 см, а ширина на 2 см короче. Чему равен его периметр?", answer: 16, answerLabel: "см", actions: [{ left: 5, op: "−", right: 2, result: 3 }, { left: 5, op: "+", right: 3, result: 8 }, { left: 8, op: "·", right: 2, result: 16 }] },
+    { id: 863, text: "Ширина прямоугольника 2 см, а длина на 4 см больше. Чему равен его периметр?", answer: 16, answerLabel: "см", actions: [{ left: 2, op: "+", right: 4, result: 6 }, { left: 2, op: "+", right: 6, result: 8 }, { left: 8, op: "·", right: 2, result: 16 }] },
+    { id: 864, text: "Сторона квадрата 5 см. Чему равен его периметр?", answer: 20, answerLabel: "см", actions: [{ left: 5, op: "·", right: 4, result: 20 }] },
+    { id: 865, text: "Длина прямоугольника 10 см, а ширина 6 см. Чему равен периметр прямоугольника?", answer: 32, answerLabel: "см", actions: [{ left: 10, op: "+", right: 6, result: 16 }, { left: 16, op: "·", right: 2, result: 32 }] }
+];

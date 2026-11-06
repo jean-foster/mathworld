@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Превью задач · 1–2 класс</title>
+<style>
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: #f0f8f4;
+        color: #1e4a6b;
+        margin: 0;
+        padding: 20px 30px;
+    }
+    h1 { color: #2a9d8f; font-size: 1.8rem; margin: 0 0 8px; }
+    .meta { color: #4a7a8c; font-size: 0.95rem; margin-bottom: 15px; }
+    .stats {
+        background: #fff3bf;
+        border: 2px solid #f5b042;
+        border-radius: 10px;
+        padding: 12px 20px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 1.05rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .reload-btn {
+        background: #2a9d8f;
+        color: #fff;
+        border: none;
+        border-bottom: 4px solid #1a6b60;
+        border-radius: 30px;
+        padding: 8px 18px;
+        font-weight: 700;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 0.95rem;
+    }
+    .reload-btn:active { transform: translateY(3px); border-bottom-width: 2px; }
+    .topic-nav {
+        background: #e6f4fc;
+        border: 2px solid #4ea8de;
+        border-radius: 15px;
+        padding: 12px 18px;
+        margin-bottom: 20px;
+    }
+    .topic-nav a {
+        display: inline-block;
+        color: #1e4a6b;
+        background: #ffffff;
+        border: 2px solid #4ea8de;
+        border-radius: 20px;
+        padding: 5px 14px;
+        margin: 4px 6px 4px 0;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+        transition: 0.15s;
+    }
+    .topic-nav a:hover { background: #4ea8de; color: #fff; }
+    h2 {
+        color: #1e4a6b;
+        font-size: 1.25rem;
+        margin: 30px 0 12px;
+        padding: 8px 16px;
+        background: #d4f0e8;
+        border-left: 6px solid #2a9d8f;
+        border-radius: 8px;
+    }
+    h2 .count {
+        font-size: 0.9rem;
+        color: #4a7a8c;
+        font-weight: 400;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(30, 74, 107, 0.08);
+        margin-bottom: 20px;
+    }
+    th, td {
+        padding: 10px 14px;
+        text-align: left;
+        border-bottom: 1px solid #e0eef4;
+        vertical-align: top;
+        font-size: 0.92rem;
+    }
+    th {
+        background: #2a9d8f;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: #f7fcfa; }
+    tr:hover td { background: #e6f4fc; }
+    .col-id      { width: 50px;  color: #4a7a8c; font-weight: 700; text-align: center; }
+    .col-answer  { width: 90px;  color: #2e7d32; font-weight: 700; text-align: center; }
+    .col-label   { width: 180px; color: #4a7a8c; font-style: italic; }
+    .col-actions { width: 180px; color: #b34700; font-family: 'Consolas', monospace; font-size: 0.9rem; }
+    .empty { color: #999; font-style: italic; }
+    .error {
+        background: #ffd6d6;
+        border: 2px solid #b34040;
+        color: #5a0000;
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    .error code {
+        background: #fff;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+    }
+</style>
+</head>
+<body>
+
+<h1>📖 Превью задач · 1–2 класс</h1>
+<p class="meta">Открывается через localhost, только для просмотра. Банки подгружаются из <code>tasks/class1-2/</code>.</p>
+
+<div class="stats" id="stats">
+    <span id="stats-text">Загрузка…</span>
+    <button class="reload-btn" onclick="location.reload()">🔄 Обновить</button>
+</div>
+
+<div id="error-box"></div>
+<div class="topic-nav" id="topic-nav"></div>
+<div id="content"></div>
+
+<!-- ============================================================ -->
+<!-- БАНКИ ЗАДАЧ — подключаем те же файлы, что и на сайте        -->
+<!-- ============================================================ -->
+<script src="tasks/class1-2/01-sum.js"></script>
+<script src="tasks/class1-2/02-increase-decrease.js"></script>
+<script src="tasks/class1-2/03-unknown-addend.js"></script>
+<script src="tasks/class1-2/04-remainder.js"></script>
+<script src="tasks/class1-2/05-unknown-subtrahend-addend.js"></script>
+<script src="tasks/class1-2/06-minuend.js"></script>
+<script src="tasks/class1-2/07-diff-compare.js"></script>
+<script src="tasks/class1-2/08-indirect-questions.js"></script>
+<script src="tasks/class1-2/09-test1.js"></script>
+<script src="tasks/class1-2/10-compound-sum.js"></script>
+<script src="tasks/class1-2/11-compound-remainder.js"></script>
+<script src="tasks/class1-2/12-compound-addend-subtrahend.js"></script>
+<script src="tasks/class1-2/13-compound-third-addend.js"></script>
+<script src="tasks/class1-2/14-compound-sum2.js"></script>
+<script src="tasks/class1-2/15-compound-minuend.js"></script>
+<script src="tasks/class1-2/16-compound-diff-compare.js"></script>
+<script src="tasks/class1-2/17-test2.js"></script>
+
+<!-- Банки задач: 3 класс -->
+<script src="tasks/class3/01-multiplication.js"></script>
+<script src="tasks/class3/02-increase-decrease-times.js"></script>
+<script src="tasks/class3/03-division-parts.js"></script>
+<script src="tasks/class3/04-multiple-comparison.js"></script>
+<script src="tasks/class3/05-increase-decrease-times-indirect.js"></script>
+<script src="tasks/class3/06-test3.js"></script>
+<script src="tasks/class3/07-compound-sum.js"></script>
+<script src="tasks/class3/08-reduction-to-unit.js"></script>
+<script src="tasks/class3/09-compound-minuend-subtrahend-diff.js"></script>
+<script src="tasks/class3/10-compound-diff-multiple.js"></script>
+<script src="tasks/class3/11-test4.js"></script>
+<script src="tasks/class3/12-compound-sum-two-products.js"></script>
+<script src="tasks/class3/13-unknown-addend.js"></script>
+<script src="tasks/class3/14-compound-div-sum-by-num.js"></script>
+<script src="tasks/class3/15-price-quantity-cost.js"></script>
+<script src="tasks/class3/16-test5.js"></script>
+<script src="tasks/class3/17-compound-price.js"></script>
+<script src="tasks/class3/18-test6.js"></script>
+<script src="tasks/class3/19-perimeter-sides.js"></script>
+<script src="tasks/class3/20-test7.js"></script>
+<script src="tasks/class3/21-fraction-of-number.js"></script>
+<script src="tasks/class3/22-test8.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Когда добавишь новый банк — просто допиши строку сюда -->
+<!-- <script src="tasks/class1-2/06-minuend.js"></script> -->
+
+<script>
+(function render() {
+    var content  = document.getElementById('content');
+    var statsEl  = document.getElementById('stats-text');
+    var navEl    = document.getElementById('topic-nav');
+    var errorBox = document.getElementById('error-box');
+
+    // Проверка: загрузились ли банки
+    if (!window.BANKS || Object.keys(window.BANKS).length === 0) {
+        errorBox.innerHTML =
+            '<div class="error">' +
+            '⚠️ Банки задач не загрузились. Скорее всего, ты открыла файл через <code>file://</code>, а не через <code>http://localhost</code>.<br><br>' +
+            'Открой: <code>http://localhost:8000/preview.html</code> (или какой у тебя порт).' +
+            '</div>';
+        statsEl.textContent = 'Ошибка загрузки';
+        return;
+    }
+
+    var total = 0;
+    var topics = 0;
+
+    Object.keys(window.BANKS).forEach(function (topicName) {
+        var bank = window.BANKS[topicName];
+        if (!Array.isArray(bank) || bank.length === 0) return;
+
+        topics++;
+        total += bank.length;
+
+        // --- Навигация ---
+        var anchorId = 'topic-' + topics;
+        var navLink = document.createElement('a');
+        navLink.href = '#' + anchorId;
+        navLink.textContent = topicName + ' (' + bank.length + ')';
+        navEl.appendChild(navLink);
+
+        // --- Заголовок темы ---
+        var h2 = document.createElement('h2');
+        h2.id = anchorId;
+        h2.innerHTML = topicName + '  <span class="count">· ' + bank.length + ' задач</span>';
+        content.appendChild(h2);
+
+        // --- Таблица ---
+        var table = document.createElement('table');
+        table.innerHTML =
+            '<thead><tr>' +
+            '<th class="col-id">№</th>' +
+            '<th>Текст задачи</th>' +
+            '<th class="col-answer">Ответ</th>' +
+            '<th class="col-label">Что нашли</th>' +
+            '<th class="col-actions">Действия</th>' +
+            '</tr></thead>';
+
+        var tbody = document.createElement('tbody');
+
+        bank.forEach(function (task) {
+            var tr = document.createElement('tr');
+
+            var tdId = document.createElement('td');
+            tdId.className = 'col-id';
+            tdId.textContent = task.id != null ? task.id : '—';
+
+            var tdText = document.createElement('td');
+            tdText.textContent = task.text || '—';
+
+            var tdAnswer = document.createElement('td');
+            tdAnswer.className = 'col-answer';
+            tdAnswer.textContent = task.answer != null ? task.answer : '—';
+
+            var tdLabel = document.createElement('td');
+            tdLabel.className = 'col-label';
+            tdLabel.textContent = task.answerLabel || '—';
+
+            var tdActions = document.createElement('td');
+            tdActions.className = 'col-actions';
+            if (task.actions && task.actions.length > 0) {
+                tdActions.innerHTML = task.actions.map(function (a) {
+                    return a.left + ' ' + a.op + ' ' + a.right + ' = ' + a.result;
+                }).join('<br>');
+            } else if (task.noAction) {
+                tdActions.innerHTML = '<span class="empty">без действия</span>';
+            } else {
+                tdActions.innerHTML = '<span class="empty">—</span>';
+            }
+
+            tr.appendChild(tdId);
+            tr.appendChild(tdText);
+            tr.appendChild(tdAnswer);
+            tr.appendChild(tdLabel);
+            tr.appendChild(tdActions);
+            tbody.appendChild(tr);
+        });
+
+        table.appendChild(tbody);
+        content.appendChild(table);
+    });
+
+    statsEl.textContent = '📊 Всего тем: ' + topics + ' · Задач: ' + total;
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+window.BANKS = window.BANKS || {};
+window.BANKS["Зачёт 8"] = [
+    // --- Вариант 1 ---
+    { id: 933, variant: 1, text: "Масса тыквы 8 кг. Сколько килограммов в половине тыквы?", answer: 4, answerLabel: "кг", actions: [{ left: 8, op: ":", right: 2, result: 4 }] },
+    { id: 934, variant: 1, text: "Пятая часть ленты составляет 10 м. Какой длины вся лента?", answer: 50, answerLabel: "м", actions: [{ left: 10, op: "·", right: 5, result: 50 }] },
+    { id: 935, variant: 1, text: "Туристы прошли 40 км. В первый день они прошли пятую часть всего пути, во второй день — четверть, а остальной путь прошли в третий день. Сколько километров они прошли в третий день?", answer: 22, answerLabel: "км", actions: [{ left: 40, op: ":", right: 5, result: 8 }, { left: 40, op: ":", right: 4, result: 10 }, { left: 8, op: "+", right: 10, result: 18 }, { left: 40, op: "−", right: 18, result: 22 }] },
+    { id: 936, variant: 1, text: "Длина проволоки 30 м. Отрезали третью часть проволоки. Сколько метров проволоки осталось?", answer: 20, answerLabel: "м", actions: [{ left: 30, op: ":", right: 3, result: 10 }, { left: 30, op: "−", right: 10, result: 20 }] },
+    { id: 937, variant: 1, text: "От куска ткани длиной 50 м отрезали пятую часть, а от куска ткани длиной 60 м отрезали шестую часть. От какого куска ткани и на сколько больше материи отрезали?", answer: 0, answerLabel: "м", actions: [{ left: 50, op: ":", right: 5, result: 10 }, { left: 60, op: ":", right: 6, result: 10 }, { left: 10, op: "−", right: 10, result: 0 }] }, // Отрезали одинаково (по 10 м)
+
+    // --- Вариант 2 ---
+    { id: 938, variant: 2, text: "Длина отрезка 12 см. Сколько сантиметров составляет четверть отрезка?", answer: 3, answerLabel: "см", actions: [{ left: 12, op: ":", right: 4, result: 3 }] },
+    { id: 939, variant: 2, text: "Третья часть массы тыквы составляет 5 кг. Какова масса всей тыквы?", answer: 15, answerLabel: "кг", actions: [{ left: 5, op: "·", right: 3, result: 15 }] },
+    { id: 940, variant: 2, text: "Мальчик за 3 дня прочитал 48 страниц. В первый день он прочитал восьмую часть книги, во второй день — четверть. Сколько страниц прочитал мальчик в третий день?", answer: 30, answerLabel: "страниц", actions: [{ left: 48, op: ":", right: 8, result: 6 }, { left: 48, op: ":", right: 4, result: 12 }, { left: 6, op: "+", right: 12, result: 18 }, { left: 48, op: "−", right: 18, result: 30 }] },
+    { id: 941, variant: 2, text: "В тетради 18 листов. Мальчик исписал шестую часть. Сколько листов ему осталось исписать?", answer: 15, answerLabel: "листов", actions: [{ left: 18, op: ":", right: 6, result: 3 }, { left: 18, op: "−", right: 3, result: 15 }] },
+    { id: 942, variant: 2, text: "От ленты длиной 30 м отрезали третью часть, а от ленты длиной 60 м отрезали шестую часть. От какой ленты отрезали больше и на сколько?", answer: 0, answerLabel: "м", actions: [{ left: 30, op: ":", right: 3, result: 10 }, { left: 60, op: ":", right: 6, result: 10 }, { left: 10, op: "−", right: 10, result: 0 }] } // Отрезали одинаково (по 10 м)
+];

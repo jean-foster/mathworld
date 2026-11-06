@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математика 1-4 класс</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Neucha&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tasks/solver.css">
+    
+</head>
+<body>
+
+<!-- Новогодние гирлянды -->
+<div class="garland garland-left" id="garland-left">
+    <svg viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <!-- Нить провисает дугой от самого верха до самого низа -->
+        <path d="M 0 10 Q 200 230, 400 10" stroke="#777" stroke-width="2" fill="none"/>
+        
+        <!-- Чередующиеся лампочки (красный, желтый, зеленый, голубой) -->
+        <circle cx="40" cy="45" r="7" fill="#ff4d4d" class="bulb b1"/>
+        <circle cx="40" cy="75" r="7" fill="#ffd166" class="bulb b2"/>
+        
+        <circle cx="100" cy="85" r="7" fill="#2a9d8f" class="bulb b3"/>
+        <circle cx="100" cy="115" r="7" fill="#4ea8de" class="bulb b4"/>
+        
+        <circle cx="160" cy="105" r="7" fill="#ff4d4d" class="bulb b5"/>
+        <circle cx="160" cy="135" r="7" fill="#ffd166" class="bulb b6"/>
+        
+        <circle cx="220" cy="105" r="7" fill="#2a9d8f" class="bulb b7"/>
+        <circle cx="220" cy="135" r="7" fill="#4ea8de" class="bulb b8"/>
+        
+        <circle cx="280" cy="85" r="7" fill="#ff4d4d" class="bulb b1"/>
+        <circle cx="280" cy="115" r="7" fill="#ffd166" class="bulb b2"/>
+        
+        <circle cx="340" cy="45" r="7" fill="#2a9d8f" class="bulb b3"/>
+        <circle cx="340" cy="75" r="7" fill="#4ea8de" class="bulb b4"/>
+    </svg>
+</div>
+
+<div class="garland garland-right" id="garland-right">
+    <svg viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M 0 10 Q 200 230, 400 10" stroke="#777" stroke-width="2" fill="none"/>
+        
+        <circle cx="60" cy="45" r="7" fill="#ffd166" class="bulb b2"/>
+        <circle cx="60" cy="75" r="7" fill="#ff4d4d" class="bulb b1"/>
+        
+        <circle cx="120" cy="85" r="7" fill="#4ea8de" class="bulb b4"/>
+        <circle cx="120" cy="115" r="7" fill="#2a9d8f" class="bulb b3"/>
+        
+        <circle cx="180" cy="105" r="7" fill="#ffd166" class="bulb b6"/>
+        <circle cx="180" cy="135" r="7" fill="#ff4d4d" class="bulb b5"/>
+        
+        <circle cx="240" cy="105" r="7" fill="#4ea8de" class="bulb b8"/>
+        <circle cx="240" cy="135" r="7" fill="#2a9d8f" class="bulb b7"/>
+        
+        <circle cx="300" cy="85" r="7" fill="#ffd166" class="bulb b2"/>
+        <circle cx="300" cy="115" r="7" fill="#ff4d4d" class="bulb b1"/>
+        
+        <circle cx="360" cy="45" r="7" fill="#4ea8de" class="bulb b4"/>
+        <circle cx="360" cy="75" r="7" fill="#2a9d8f" class="bulb b3"/>
+    </svg>
+</div>
+
+<button class="garland-toggle" id="garland-toggle" title="Скрыть/показать гирлянды">🎄</button>
+
+
+
+<!-- Дудлы на полях -->
+<div class="doodles" aria-hidden="true">
+
+    <!-- Объёмный куб -->
+    <svg class="doodle doodle-13" viewBox="0 0 100 100" fill="none" stroke="#1a4a9c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M 20 30 L 50 14 L 80 30 L 80 62 L 50 78 L 20 62 Z"/>
+        <path d="M 20 30 L 50 46 L 80 30"/>
+        <path d="M 50 46 L 50 78"/>
+    </svg>
+
+    <!-- Ступеньки-зигзаг -->
+    <svg class="doodle doodle-14" viewBox="0 0 100 100" fill="none" stroke="#1a4a9c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M 10 20 L 50 20 L 50 40 L 70 40 L 70 60 L 90 60 L 90 90 L 10 90 Z"/>
+        <path d="M 10 20 L 30 30 L 70 30 L 90 60"/>
+        <path d="M 30 30 L 30 50 L 50 50 L 50 70 L 70 70 L 70 90"/>
+        <path d="M 50 40 L 30 50"/>
+        <path d="M 70 60 L 50 70"/>
+        <path d="M 90 60 L 70 70"/>
+    </svg>
+
+    <!-- Крестики-нолики — поле 1 -->
+    <svg class="doodle doodle-15" viewBox="0 0 90 90" fill="none" stroke="#1a4a9c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+        <line x1="30" y1="10" x2="30" y2="80"/>
+        <line x1="60" y1="10" x2="60" y2="80"/>
+        <line x1="10" y1="30" x2="80" y2="30"/>
+        <line x1="10" y1="60" x2="80" y2="60"/>
+        <line x1="14" y1="14" x2="26" y2="26"/>
+        <line x1="26" y1="14" x2="14" y2="26"/>
+        <circle cx="45" cy="45" r="7"/>
+        <line x1="64" y1="64" x2="76" y2="76"/>
+        <line x1="76" y1="64" x2="64" y2="76"/>
+    </svg>
+
+    <!-- Крестики-нолики — поле 2 -->
+    <svg class="doodle doodle-16" viewBox="0 0 90 90" fill="none" stroke="#1a4a9c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+        <line x1="30" y1="10" x2="30" y2="80"/>
+        <line x1="60" y1="10" x2="60" y2="80"/>
+        <line x1="10" y1="30" x2="80" y2="30"/>
+        <line x1="10" y1="60" x2="80" y2="60"/>
+        <line x1="14" y1="14" x2="26" y2="26"/>
+        <line x1="26" y1="14" x2="14" y2="26"/>
+        <line x1="44" y1="44" x2="56" y2="56"/>
+        <line x1="56" y1="44" x2="44" y2="56"/>
+        <line x1="14" y1="44" x2="26" y2="56"/>
+        <line x1="26" y1="44" x2="14" y2="56"/>
+        <line x1="74" y1="74" x2="76" y2="76"/>
+    </svg>
+
+    <!-- Крестики-нолики — поле 3 -->
+    <svg class="doodle doodle-17" viewBox="0 0 90 90" fill="none" stroke="#1a4a9c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+        <line x1="30" y1="10" x2="30" y2="80"/>
+        <line x1="60" y1="10" x2="60" y2="80"/>
+        <line x1="10" y1="30" x2="80" y2="30"/>
+        <line x1="10" y1="60" x2="80" y2="60"/>
+        <circle cx="20" cy="20" r="7"/>
+        <circle cx="50" cy="20" r="7"/>
+        <circle cx="80" cy="20" r="7"/>
+        <line x1="14" y1="44" x2="26" y2="56"/>
+        <line x1="26" y1="44" x2="14" y2="56"/>
+        <line x1="44" y1="44" x2="56" y2="56"/>
+        <line x1="56" y1="44" x2="44" y2="56"/>
+        <line x1="74" y1="44" x2="76" y2="56"/>
+        <line x1="76" y1="44" x2="74" y2="56"/>
+        <circle cx="20" cy="75" r="7"/>
+        <line x1="44" y1="68" x2="56" y2="80"/>
+        <line x1="56" y1="68" x2="44" y2="80"/>
+        <circle cx="80" cy="75" r="7"/>
+    </svg>
+
+    <!-- Пример «2 + 2» и «2 × 2» как на фото -->
+    <svg class="doodle doodle-18" viewBox="0 0 100 50" fill="none" stroke="#1a4a9c" stroke-width="2.5" stroke-linecap="round" font-family="Caveat, cursive" font-weight="700">
+        <text x="5" y="38" font-size="38" fill="#1a4a9c" stroke="none">2 + 2</text>
+    </svg>
+    <svg class="doodle doodle-19" viewBox="0 0 100 50" fill="none" stroke="#1a4a9c" stroke-width="2.5" stroke-linecap="round" font-family="Caveat, cursive" font-weight="700">
+        <text x="5" y="38" font-size="38" fill="#1a4a9c" stroke="none">2 × 2</text>
+    </svg>
+
+    <!-- Тучка с завитушками -->
+    <svg class="doodle doodle-20" viewBox="0 0 120 70" fill="none" stroke="#1a4a9c" stroke-width="2.5" stroke-linecap="round">
+        <path d="M 20 50 Q 10 30, 30 25 Q 35 12, 55 18 Q 70 8, 85 22 Q 105 22, 105 42 Q 110 55, 95 55 L 30 55 Q 15 55, 20 50 Z"/>
+        <path d="M 30 62 Q 40 58, 50 62 Q 60 58, 70 62 Q 80 58, 90 62"/>
+    </svg>
+    <!-- Солнышко -->
+    <svg class="doodle doodle-1" viewBox="0 0 80 80" fill="none" stroke="#1a4a9c" stroke-width="2.5" stroke-linecap="round">
+        <circle cx="40" cy="40" r="14"/>
+        <line x1="40" y1="8"  x2="40" y2="18"/>
+        <line x1="40" y1="62" x2="40" y2="72"/>
+        <line x1="8"  y1="40" x2="18" y2="40"/>
+        <line x1="62" y1="40" x2="72" y2="40"/>
+        <line x1="17" y1="17" x2="24" y2="24"/>
+        <line x1="56" y1="56" x2="63" y2="63"/>
+        <line x1="63" y1="17" x2="56" y2="24"/>
+        <line x1="24" y1="56" x2="17" y2="63"/>
+    </svg>
+
+    <!-- Звёздочка -->
+    <svg class="doodle doodle-2" viewBox="0 0 80 80" fill="none" stroke="#1a4a9c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M 40 8 L 48 32 L 72 32 L 52 48 L 60 72 L 40 56 L 20 72 L 28 48 L 8 32 L 32 32 Z"/>
+    </svg>
+
+    <!-- Цветочек -->
+    <svg class="doodle doodle-3" viewBox="0 0 80 80" fill="none" stroke="#1a4a9c" stroke-width="2.5" stroke-linecap="round">
+        <circle cx="40" cy="40" r="6"/>
+        <ellipse cx="40" cy="22" rx="7" ry="12"/>
+        <ellipse cx="40" cy="58" rx="7" ry="12"/>
+        <ellipse cx="22" cy="40" rx="12" ry="7"/>
+        <ellipse cx="58" cy="40" rx="12" ry="7"/>
+        <path d="M 40 46 L 40 72"/>
+    </svg>
+
+    <!-- Кораблик -->
+    <svg class="doodle doodle-4" viewBox="0 0 80 80" fill="none" stroke="#1a4a9c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M 12 52 L 68 52 L 58 66 L 22 66 Z"/>
+        <path d="M 40 52 L 40 16"/>
+        <path d="M 40 18 L 62 42 L 40 42 Z"/>
+        <path d="M 40 18 L 22 42 L 40 42 Z"/>
+    </svg>
+
+    <!-- Смайлик -->
+    <svg class="doodle doodle-5" viewBox="0 0 80 80" fill="none" stroke="#1a4a9c" stroke-width="2.5" stroke-linecap="round">
+        <circle cx="40" cy="40" r="26"/>
+        <circle cx="30" cy="33" r="2" fill="#1a4a9c"/>
+        <circle cx="50" cy="33" r="2" fill="#1a4a9c"/>
+        <path d="M 26 50 Q 40 60, 54 50"/>
+    </svg>
+
+    <!-- Ракета -->
+    <svg class="doodle doodle-6" viewBox="0 0 80 80" fill="none" stroke="#1a4a9c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M 40 8 Q 52 24, 52 44 L 52 58 L 28 58 L 28 44 Q 28 24, 40 8 Z"/>
+        <circle cx="40" cy="34" r="5"/>
+        <path d="M 28 58 L 22 66 L 32 62"/>
+        <path d="M 52 58 L 58 66 L 48 62"/>
+        <path d="M 36 66 L 40 74 L 44 66"/>
+    </svg>
+
+    <!-- Сердечко -->
+    <svg class="doodle doodle-7" viewBox="0 0 80 80" fill="none" stroke="#1a4a9c" stroke-width="2.5" stroke-linecap="round">
+        <path d="M 40 68 C 8 48, 8 22, 24 16 C 34 12, 40 22, 40 22 C 40 22, 46 12, 56 16 C 72 22, 72 48, 40 68 Z"/>
+    </svg>
+
+    <!-- Волнистая линия / каракуля -->
+    <svg class="doodle doodle-8" viewBox="0 0 120 60" fill="none" stroke="#1a4a9c" stroke-width="2.5" stroke-linecap="round">
+        <path d="M 6 30 Q 18 6, 30 30 T 54 30 T 78 30 T 102 30 T 114 30"/>
+    </svg>
+
+    <!-- Кружочки-пузырьки -->
+    <svg class="doodle doodle-9" viewBox="0 0 80 80" fill="none" stroke="#1a4a9c" stroke-width="2.5" stroke-linecap="round">
+        <circle cx="20" cy="60" r="6"/>
+        <circle cx="32" cy="42" r="9"/>
+        <circle cx="52" cy="50" r="12"/>
+        <circle cx="58" cy="22" r="7"/>
+    </svg>
+
+    <!-- Бабочка -->
+    <svg class="doodle doodle-10" viewBox="0 0 80 80" fill="none" stroke="#1a4a9c" stroke-width="2.5" stroke-linecap="round">
+        <path d="M 40 40 L 40 66"/>
+        <path d="M 40 40 Q 18 12, 14 34 Q 14 46, 40 42"/>
+        <path d="M 40 40 Q 62 12, 66 34 Q 66 46, 40 42"/>
+        <path d="M 40 40 Q 20 58, 18 50 Q 20 40, 40 42"/>
+        <path d="M 40 40 Q 60 58, 62 50 Q 60 40, 40 42"/>
+        <line x1="40" y1="40" x2="34" y2="30"/>
+        <line x1="40" y1="40" x2="46" y2="30"/>
+    </svg>
+
+    <!-- Стрелочка с петелькой -->
+    <svg class="doodle doodle-11" viewBox="0 0 100 80" fill="none" stroke="#1a4a9c" stroke-width="2.5" stroke-linecap="round">
+        <path d="M 10 60 Q 20 20, 40 40 Q 55 55, 40 50 Q 30 45, 45 30 L 80 20"/>
+        <path d="M 72 14 L 82 20 L 76 30"/>
+    </svg>
+
+    <!-- Домик -->
+    <svg class="doodle doodle-12" viewBox="0 0 80 80" fill="none" stroke="#1a4a9c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M 14 42 L 40 18 L 66 42"/>
+        <rect x="22" y="42" width="36" height="28"/>
+        <rect x="34" y="52" width="12" height="18"/>
+    </svg>
+
+</div>
+
+    <div class="app">
+        <header>
+            <h1>🧮 Мир математики 🧮</h1>
+            <p class="subhead">Все темы начальной школы по математике</p>
+        </header>
+
+        <div class="class-buttons">
+            <button class="class-btn" data-class="1-2">1-2 класс</button>
+            <button class="class-btn" data-class="3">3 класс</button>
+            <button class="class-btn" data-class="4">4 класс</button>
+        </div>
+
+<!-- Навигация по вкладкам -->
+<div class="main-tabs">
+    <button class="main-tab-btn active" id="tab-trainers">🎯 Тренажёры</button>
+    <button class="main-tab-btn" id="tab-guide">📖 Справочник</button>
+    <button class="main-tab-btn" id="constructor-btn">🛠 Конструктор</button>
+</div>
+
+<!-- Блок тренажёров -->
+<div class="trainers-block" id="trainers-view">
+    <div class="trainers-buttons">
+        <button class="trainer-btn" data-trainer="multiplication">
+            ✖️ Таблица умножения
+        </button>
+        <button class="trainer-btn" data-trainer="order">
+            🔢 Примеры по действиям
+        </button>
+        <button class="trainer-btn" data-trainer="columns">
+            ➕ Примеры в столбик
+        </button>
+        <button class="trainer-btn" data-trainer="units">
+            📏 Единицы измерения
+        </button>
+        <button class="trainer-btn" data-trainer="area">
+            📐 Площадь и периметр
+        </button>
+        <button class="trainer-btn" data-trainer="numbers">
+            🔢 Работа с числами
+        </button>
+        <button class="trainer-btn" data-trainer="equations">
+            ⚖️ Уравнения
+        </button>
+    </div>
+</div>
+
+
+
+<div class="topics-container" id="topics-container" style="display:none;">
+    <div class="topics-header-row">
+        <h2 id="topics-title" class="clickable-title" style="margin-top: 20px;">Темы</h2>
+        
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button class="progress-btn" id="progress-btn">📊 Мой прогресс</button>
+            <button class="progress-btn" id="rules-btn" style="background: linear-gradient(180deg,#a8e6a3 0%,#7ed4b1 100%); border-bottom-color:#3e8c6a; color:#0f3d0c;">🎓 Правила</button>
+        </div>
+    </div>
+    
+    <!-- Контейнер для списка тем -->
+    <div id="topics-list-wrapper">
+        <div id="topics-list" class="topics-list"></div>
+        <div id="tasks-display" class="tasks-display"></div>
+    </div>
+
+    <!-- Контейнер для прогресса (скрыт по умолчанию) -->
+    <div id="progress-display" class="progress-display" style="display:none;">
+        <!-- Для 1-2 класса: шкаф -->
+        <div class="tree-container" id="tree-container" style="display: none;"></div>
+        
+        <!-- Для 3 класса: космос -->
+        <div class="space-container" id="space-container" style="display: none;"></div>
+        
+        <!-- Для 4 класса: озеро -->
+        <div class="lake-container" id="lake-container" style="display: none;"></div>
+    </div>
+
+
+<!-- МОДАЛКА ПРАВИЛ (вынесена отдельно, чтобы не ломать верстку) -->
+<div class="rules-overlay" id="rules-modal">
+    <div class="rules-window">
+        <div class="rules-header">
+            <h3 id="rules-title">🎓 Как заработать награды</h3>
+            <button class="rules-close" id="rules-close">×</button>
+        </div>
+        <div class="rules-content" id="rules-content">
+            <!-- Содержимое будет меняться через JS -->
+        </div>
+    </div>
+</div>
+
+
+
+<div class="cheatsheet-wrap" style="margin-top: 25px; margin-bottom: 25px;">
+    <div id="cheatsheet-container"></div>
+</div>
+
+    <div class="guide-block" id="guide-view" style="display: none;">
+   
+        <div class="guide-content" id="guide-content">
+            <!-- Сюда скрипт вставит текст из файла guide.js -->
+        </div>
+    </div>
+
+    </div> <!-- Закрываем .app -->
+
+    <footer>
+        <div class="footer-content">
+            <span class="footer-name">© Фурсова Надежда Евгеньевна, бета-версия, 2026</span>
+            
+            <div class="footer-links">
+                <a href="https://t.me/violet_repetitor" target="_blank" rel="noopener">Запись на индивидуальные занятия</a>
+                <span class="footer-dot">·</span>
+                <a href="tel:+79633497727" class="footer-phone">+7 (963) 349-77-27</a>
+<span class="footer-dot">·</span>
+<a href="https://t.me/mathworld_bot" target="_blank" rel="noopener" class="footer-support">Техподдержка</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ЭКРАН РЕШЕНИЯ ЗАДАЧИ -->
+    <div class="solver-screen" id="solver-screen">
+    <!-- Слой для рисования на фоне -->
+    <canvas id="solver-canvas" class="solver-canvas"></canvas>
+
+    <!-- Кнопка ластика -->
+    <button class="solver-clear-btn" id="solver-clear-btn" title="Стереть всё">🧽</button>
+        <div class="solver-wrap">
+            <div class="solver-top">
+                <div class="solver-top-left">
+                    <span class="solver-badge" id="solver-topic-badge">Тема</span>
+                    <span class="solver-badge" id="solver-counter">1 / 10</span>
+                </div>
+                <div class="solver-top-right">
+                    <button class="solver-exit-btn" id="solver-exit-btn">Выйти</button>
+                </div>
+            </div>
+
+            <div class="solver-task-text" id="solver-task-text">Загрузка...</div>
+
+
+<div class="solver-task-mode" id="solver-task-mode">
+
+            <div class="solver-work">
+                <div class="condition-box">
+                    <p class="condition-title">Краткое условие:</p>
+                    <div class="condition-rows" id="condition-rows"></div>
+                    <button class="condition-add-row" id="condition-add-row">+ добавить строку</button>
+                    <div class="brackets-layer" id="brackets-layer"></div>
+                </div>
+
+<div class="tools-panel">
+    <p class="tools-title">Скобки</p>
+
+    <!-- Круглая — как реальная скобка в условии -->
+    <div class="tool-btn" data-bracket="round" title="Круглая со стрелочками">
+        <svg width="70" height="70" viewBox="0 0 70 70">
+            <!-- Круглая скобка -->
+            <path d="M 20 10 Q 45 35, 20 60"
+                  fill="none" stroke="#1e4a6b" stroke-width="2.5" stroke-linecap="round"/>
+
+            <!-- Верхняя стрелка: те же пропорции, что в условии (M 13 5 L 1 0 L 3 10) -->
+            <path d="M 28 10 L 16 5 L 18 15 Z" fill="#1e4a6b"/>
+
+            <!-- Нижняя стрелка: те же пропорции (M 13 h+5 L 1 h+10 L 3 h) -->
+            <path d="M 28 60 L 16 65 L 18 55 Z" fill="#1e4a6b"/>
+
+            <!-- Ячейка ? справа -->
+            <rect x="45" y="26" width="18" height="18" rx="4"
+                  fill="#fff" stroke="#1e4a6b" stroke-width="2"/>
+            <text x="54" y="40" font-size="14" font-weight="bold"
+                  fill="#b34700" text-anchor="middle">?</text>
+        </svg>
+    </div>
+
+    <!-- Фигурная, носик справа, ? справа -->
+    <div class="tool-btn" data-bracket="curly" title="Фигурная">
+        <svg width="60" height="70" viewBox="0 0 60 70">
+            <path d="M 10 12 Q 25 12, 25 24 Q 25 35, 33 35 Q 25 35, 25 46 Q 25 58, 10 58"
+                  fill="none" stroke="#1e4a6b" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="36" y="26" width="18" height="18" rx="4" fill="#fff" stroke="#1e4a6b" stroke-width="2"/>
+            <text x="45" y="40" font-size="14" font-weight="bold" fill="#b34700" text-anchor="middle">?</text>
+        </svg>
+    </div>
+
+    <!-- Квадратная: 3 линии, стрелка слева на нижней -->
+    <div class="tool-btn" data-bracket="square" title="Квадратная со стрелочкой">
+        <svg width="60" height="70" viewBox="0 0 60 70">
+            <!-- Верхняя горизонталь -->
+            <path d="M 25 15 L 50 15" fill="none" stroke="#1e4a6b" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Правая вертикаль -->
+            <path d="M 50 15 L 50 55" fill="none" stroke="#1e4a6b" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Нижняя горизонталь влево -->
+            <path d="M 50 55 L 25 55" fill="none" stroke="#1e4a6b" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Стрелка влево на конце нижней линии -->
+            <path d="M 32 51 L 22 55 L 32 59 Z" fill="#1e4a6b"/>
+        </svg>
+    </div>
+
+    <button class="solver-btn secondary" id="solver-show-answer-btn">Ответ</button>
+</div>
+</div>
+
+            <button class="solver-solve-btn" id="solver-solve-btn">Решение</button>
+
+            <div class="actions-box" id="actions-box"></div>
+            <button class="action-add-row" id="action-add-row" style="display:none;">+ добавить действие</button>
+
+            <div class="answer-box" id="answer-box">
+                <div class="answer-line">
+                    <input type="text" class="answer-cell" id="answer-cell" inputmode="numeric">
+                    <span id="answer-label">ответ</span>
+                </div>
+            </div>
+</div>
+
+
+<div class="solver-controls" id="main-task-controls">
+    <button class="solver-btn primary" id="solver-check-btn" style="display:none;">Проверить</button>
+    <button class="solver-btn primary" id="solver-next-btn" style="display:none;">Следующая задача →</button>
+</div>
+
+
+            <p class="solver-feedback" id="solver-feedback"></p>
+<div class="solver-trainer-mode" id="solver-trainer-mode" style="display:none;">
+
+
+<!-- Режим «Римские цифры» -->
+<div class="trainer-roman-mode" id="trainer-roman-mode" style="display:none; text-align:center; padding: 20px;">
+    <div class="roman-task-text" id="roman-task-text" style="font-size:1.6rem; font-weight:800; color:#1e4a6b; margin-bottom:20px;"></div>
+    
+    <!-- Поле ввода для арабских цифр -->
+    <div id="roman-input-container" style="display:none; margin-bottom: 20px;">
+        <input type="text" id="roman-arabic-input" class="trainer-answer-input" inputmode="numeric" style="width:200px; font-size: 2rem;" placeholder="?">
+        
+        <input type="text" id="roman-user-input" class="trainer-answer-input" style="width:200px; font-size: 2rem; text-transform: uppercase; display:none;" placeholder="?" readonly>
+    </div>
+
+    <!-- Клавиатура для составления римского числа -->
+    <div id="roman-keyboard" style="display:none; justify-content:center; gap:10px; margin-bottom:20px; flex-wrap:wrap;">
+        <button class="roman-key solver-btn primary" data-sym="I" style="font-size: 1.5rem; padding: 10px 20px;">I</button>
+        <button class="roman-key solver-btn primary" data-sym="V" style="font-size: 1.5rem; padding: 10px 20px;">V</button>
+        <button class="roman-key solver-btn primary" data-sym="X" style="font-size: 1.5rem; padding: 10px 20px;">X</button>
+        <button class="roman-key solver-btn primary" data-sym="L" style="font-size: 1.5rem; padding: 10px 20px;">L</button>
+        <button class="roman-key solver-btn primary" data-sym="C" style="font-size: 1.5rem; padding: 10px 20px;">C</button>
+        <button class="roman-key solver-btn primary" data-sym="D" style="font-size: 1.5rem; padding: 10px 20px;">D</button>
+        <button class="roman-key solver-btn primary" data-sym="M" style="font-size: 1.5rem; padding: 10px 20px;">M</button>
+        <button id="roman-clear-btn" class="solver-btn secondary" style="font-size: 1.2rem; padding: 10px 20px;">Стереть</button>
+    </div>
+
+    <div class="solver-controls" style="margin-top: 20px;">
+        <button class="solver-btn primary" id="roman-check-btn">Проверить</button>
+        <button class="solver-btn primary" id="roman-next-btn" style="display:none;">Следующее →</button>
+    </div>
+    <p class="solver-feedback" id="roman-feedback"></p>
+</div>
+
+
+<!-- Режим «Работа с числами» -->
+<div class="trainer-numbers-mode" id="trainer-numbers-mode" style="display:none;">
+    <div class="numbers-task" id="numbers-task"></div>
+    
+    <div class="numbers-rows" id="numbers-rows"></div>
+
+    <div class="solver-controls" style="margin-top: 20px;">
+        <button class="solver-btn primary" id="numbers-check-btn">Проверить</button>
+        <button class="solver-btn primary" id="numbers-next-btn" style="display:none;">Следующее →</button>
+    </div>
+    <p class="solver-feedback" id="numbers-feedback"></p>
+</div>
+
+<!-- Режим «Время по часам» -->
+<div class="trainer-clock-mode" id="trainer-clock-mode" style="display:none; text-align:center;">
+    <div class="clock-task-text" id="clock-task-text" style="font-size:1.5rem; font-weight:800; color:#1e4a6b; margin-bottom:20px;"></div>
+    
+    <!-- Фон для часов -->
+    <div class="clock-bg">
+        <canvas id="clock-canvas" width="300" height="300" style="border-radius:50%; box-shadow:0 10px 20px rgba(0,0,0,0.15); cursor:pointer; touch-action:none;"></canvas>
+    </div>
+
+
+<div id="clock-current-time" style="display: none;"></div>
+
+    <!-- Подсказки для режима установки -->
+    <div id="clock-set-controls" style="display:none; margin-bottom:15px; font-size:0.95rem; color:#1e4a6b; font-weight: bold;">
+    </div>
+
+    <!-- Поля для ввода ответа (режим чтения) -->
+    <div class="answer-box active" id="clock-answer-box" style="display:none; margin: 20px auto; max-width: 400px; justify-content: center; align-items: center; gap: 10px;">
+        <span style="font-size:2rem; font-weight:800; color:#b34700;">Время:</span>
+        <input type="text" class="answer-cell" id="clock-answer-h" inputmode="numeric" style="width: 80px; font-size: 2rem; text-align:center;" placeholder="Ч">
+        <span style="font-size:2rem; font-weight:800; color:#b34700;">:</span>
+        <input type="text" class="answer-cell" id="clock-answer-m" inputmode="numeric" style="width: 80px; font-size: 2rem; text-align:center;" placeholder="М">
+    </div>
+
+    <div class="solver-controls" style="margin-top: 20px;">
+        <button class="solver-btn primary" id="clock-check-btn">Проверить</button>
+        <button class="solver-btn primary" id="clock-next-btn" style="display:none;">Следующее →</button>
+    </div>
+    <p class="solver-feedback" id="clock-feedback"></p>
+</div>
+
+
+
+<!-- Режим «Примеры по действиям» -->
+<div class="trainer-order-mode" id="trainer-order-mode" style="display:none; padding: 20px 10px;">
+    <div id="order-example-container" class="order-example"></div>
+
+    <!-- Кнопка Решение -->
+    <button class="solver-solve-btn" id="order-solve-btn" style="margin-top: 15px;">Решение</button>
+
+    <!-- Блок для непроверяемых действий -->
+    <div class="actions-box" id="order-actions-box" style="display:none; flex-direction: column; gap: 10px; align-items: center; margin: 20px 0;"></div>
+    
+    <div style="text-align: center; margin-bottom: 20px;">
+        <button class="action-add-row" id="order-action-add-row" style="display:none;">+ добавить действие</button>
+    </div>
+
+    <!-- Блок проверяемого ответа -->
+    <div class="answer-box active" id="order-answer-box" style="display:none; margin: 20px auto; max-width: 300px;">
+        <div class="answer-line" style="justify-content: center;">
+            <span class="rect-formula-label" style="font-size: 2rem; color: #b34700;">Ответ:</span>
+            <input type="text" class="answer-cell" id="order-answer-cell" inputmode="numeric" style="width: 120px; font-size: 2rem;">
+        </div>
+    </div>
+
+    <div class="solver-controls" style="margin-top: 20px;">
+        <button class="solver-btn primary" id="order-check-btn" style="display:none;">Проверить</button>
+        <button class="solver-btn primary" id="order-next-btn" style="display:none;">Следующее →</button>
+    </div>
+    <p class="solver-feedback" id="order-feedback"></p>
+</div>
+
+<!-- Режим «Единицы измерения» -->
+<div class="trainer-units-mode" id="trainer-units-mode" style="display:none;">
+    <div class="units-task" id="units-task"></div>
+
+    <!-- Кнопка «Решение» -->
+    <button class="solver-solve-btn" id="units-solve-btn" style="margin-top: 15px;">Решение</button>
+
+    <!-- Строки для решения -->
+    <div class="actions-box" id="units-actions" style="display:none; flex-direction: column; gap: 10px; align-items: center; margin-bottom: 20px;"></div>
+    
+    <div style="text-align: center; margin-bottom: 20px;">
+        <button class="action-add-row" id="units-action-add-row" style="display:none;">+ добавить строку</button>
+    </div>
+
+    <!-- Блок проверки -->
+    <div class="solver-controls">
+        <button class="solver-btn primary" id="units-check-btn" style="display:none;">Проверить</button>
+        <button class="solver-btn primary" id="units-next-btn" style="display:none;">Следующее →</button>
+    </div>
+    <p class="solver-feedback" id="units-feedback"></p>
+</div>
+
+<!-- Режим «Уравнения» -->
+<div class="trainer-equations-mode" id="trainer-equations-mode" style="display:none;">
+    <div class="equation-wrap">
+        <div class="equation-text" id="trainer-equation-text">x + 5 = 12</div>
+    </div>
+
+    <!-- Кнопка «Решение» -->
+    <button class="solver-solve-btn" id="eq-solve-btn">Решение</button>
+
+    <!-- Строки для решения (непроверяемые) -->
+    <div class="actions-box" id="eq-actions-box" style="display:none; flex-direction: column; gap: 10px; align-items: center; margin-bottom: 20px;">
+    </div>
+    
+    <div style="text-align: center; margin-bottom: 20px;">
+        <button class="action-add-row" id="eq-action-add-row" style="display:none; margin-bottom: 10px;">+ добавить строку</button>
+        <button class="action-add-row" id="eq-check-add-row" style="display:none;">+ записать проверку</button>
+    </div>
+
+    <!-- Блок для ответа (проверяемый) -->
+    <div class="answer-box active" id="eq-answer-box" style="display:none; margin: 20px auto; max-width: 300px;">
+        <div class="answer-line" style="justify-content: center;">
+            <span id="eq-answer-label" class="rect-formula-label" style="font-size: 2rem; color: #b34700;">x =</span>
+            <input type="text" class="answer-cell" id="eq-answer-cell" inputmode="numeric" style="width: 120px; font-size: 2rem;">
+        </div>
+    </div>
+
+    <div class="solver-controls" style="margin-top: 20px;">
+        <button class="solver-btn primary" id="eq-check-btn" style="display:none;">Проверить</button>
+        <button class="solver-btn primary" id="eq-next-btn" style="display:none;">Следующее →</button>
+    </div>
+    <p class="solver-feedback" id="eq-feedback"></p>
+</div>
+
+
+
+
+
+<div class="trainer-rect-mode" id="trainer-rect-mode" style="display:none;">
+    <div class="rect-task" id="rect-task"></div>
+
+    <div class="rect-field-wrap">
+        <canvas id="rect-canvas" class="rect-canvas" width="600" height="600"></canvas>
+        <div class="rect-hint" id="rect-hint">
+            Зажми левую кнопку мыши и растяни прямоугольник
+        </div>
+    </div>
+
+    <!-- S = a × b = ? -->
+    <div class="rect-formula" id="rect-s-formula">
+        <span class="rect-formula-label">S =</span>
+        <span class="rect-static" id="rect-s-a">?</span>
+        <span class="rect-op">×</span>
+        <span class="rect-static" id="rect-s-b">?</span>
+        <span class="rect-eq">=</span>
+        <span class="rect-static rect-static-result" id="rect-s-c">?</span>
+    </div>
+
+    <!-- P = 2 × (a + b) = ? -->
+    <div class="rect-formula" id="rect-p-formula">
+        <span class="rect-formula-label">P =</span>
+        <span class="rect-static">2</span>
+        <span class="rect-op">×</span>
+        <span class="rect-bracket">(</span>
+        <span class="rect-static" id="rect-p-a">?</span>
+        <span class="rect-op">+</span>
+        <span class="rect-static" id="rect-p-b">?</span>
+        <span class="rect-bracket">)</span>
+        <span class="rect-eq">=</span>
+        <span class="rect-static rect-static-result" id="rect-p-c">?</span>
+    </div>
+
+    <div class="solver-controls">
+        <button class="solver-btn primary" id="rect-next-btn">Следующее задание →</button>
+    </div>
+</div>
+
+
+    <div class="trainer-simple-mode" id="trainer-simple-mode">
+        <div class="trainer-example" id="trainer-example">2 × 2 = ?</div>
+        <input type="text" class="trainer-answer-input" id="trainer-answer-input"
+               inputmode="numeric" placeholder="?">
+    </div>
+
+</div>
+
+
+
+
+
+
+
+    <!-- Режим столбика (сложение, вычитание, умножение, деление) -->
+    <div class="trainer-column-mode" id="trainer-column-mode" style="display:none;">
+        <div class="column-wrapper" id="column-wrapper"></div>
+    </div>
+
+</div>
+        </div>
+    </div>
+
+    <!-- МОДАЛКА «СКОЛЬКО ЗАДАЧ?» -->
+    <div class="count-modal-overlay" id="count-modal-overlay">
+        <div class="count-modal">
+            <h3 id="count-modal-title">Тема</h3>
+            <p>Сколько задач решить?</p>
+            <div class="count-modal-buttons">
+                <button class="count-modal-btn" data-count="5">5</button>
+                <button class="count-modal-btn" data-count="10">10</button>
+                <button class="count-modal-btn" data-count="20">20</button>
+            </div>
+            <button class="count-modal-cancel" id="count-modal-cancel">Отмена</button>
+        </div>
+    </div>
+
+<div class="trainer-modal-overlay" id="modal-numbers">
+    <div class="trainer-modal">
+        <h3>🎓 Работа с числами</h3>
+        <p>Что будем тренировать?</p>
+        <div class="trainer-modal-numbers" style="flex-direction: column; gap: 10px;">
+            <button class="trainer-num-btn" data-numbers-type="digits" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <span style="font-size: 1.5rem;">🔢</span> Разряды числа
+            </button>
+            <button class="trainer-num-btn" data-numbers-type="roman" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <span style="font-size: 1.5rem;">🏛️</span> Римские числа
+            </button>
+            <button class="trainer-num-btn" data-numbers-type="clock" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <span style="font-size: 1.5rem;">⏰</span> Время по часам
+            </button>
+        </div>
+        <button class="trainer-modal-cancel" data-cancel>Отмена</button>
+    </div>
+</div>
+
+
+<!-- Модалка: Примеры по действиям — выбор сложности -->
+<div class="trainer-modal-overlay" id="modal-order-level">
+    <div class="trainer-modal">
+        <h3>🔢 Примеры по действиям</h3>
+        <p>Выбери уровень сложности:</p>
+        <div class="trainer-modal-numbers" style="flex-direction: column; gap: 10px;">
+            <button class="trainer-num-btn" data-order-level="easy" style="width: 100%;">🟢 Простые</button>
+            <button class="trainer-num-btn" data-order-level="medium" style="width: 100%;">🟡 Средние</button>
+            <button class="trainer-num-btn" data-order-level="hard" style="width: 100%;">🔴 Сложные</button>
+        </div>
+        <button class="trainer-modal-cancel" data-cancel>Отмена</button>
+    </div>
+</div>
+
+
+
+<!-- Модалка: Таблица умножения — выбор числа -->
+<div class="trainer-modal-overlay" id="modal-multiplication">
+    <div class="trainer-modal">
+        <h3>✖️ Таблица умножения</h3>
+        <p>До какого числа решать?</p>
+        <div class="trainer-modal-numbers">
+            <button class="trainer-num-btn" data-max="5">до 5</button>
+            <button class="trainer-num-btn" data-max="10">до 10</button>
+            <button class="trainer-num-btn" data-max="15">до 15</button>
+            <button class="trainer-num-btn" data-max="20">до 20</button>
+        </div>
+        <button class="trainer-modal-cancel" data-cancel>Отмена</button>
+    </div>
+</div>
+
+<!-- Модалка: Примеры в столбик — выбор операции -->
+<div class="trainer-modal-overlay" id="modal-columns">
+    <div class="trainer-modal">
+        <h3>➕ Примеры в столбик</h3>
+        <p>Выбери действие:</p>
+                <div class="trainer-modal-numbers">
+            <button class="trainer-num-btn" data-op="add">➕ Сложение</button>
+            <button class="trainer-num-btn" data-op="sub">➖ Вычитание</button>
+            <button class="trainer-num-btn" data-op="mul">✖️ Умножение</button>
+            <button class="trainer-num-btn" data-op="div">➗ Деление</button>
+        </div>
+        <button class="trainer-modal-cancel" data-cancel>Отмена</button>
+    </div>
+</div>
+
+<!-- Модалка: Деление — с остатком или без -->
+<div class="trainer-modal-overlay" id="modal-division-type">
+    <div class="trainer-modal">
+        <h3>➗ Деление в столбик</h3>
+        <p>С остатком или без?</p>
+        <div class="trainer-modal-numbers">
+            <button class="trainer-num-btn" data-remainder="no">Без остатка</button>
+            <button class="trainer-num-btn" data-remainder="yes">С остатком</button>
+        </div>
+        <button class="trainer-modal-cancel" data-cancel>Отмена</button>
+    </div>
+</div>
+
+
+<!-- Модалка: Примеры в столбик — выбор разряда -->
+<div class="trainer-modal-overlay" id="modal-columns-range">
+    <div class="trainer-modal">
+        <h3 id="columns-range-title">➕ Сложение в столбик</h3>
+        <p id="columns-range-sub">Выбери разряд чисел:</p>
+        <div class="trainer-modal-numbers" id="columns-range-buttons">
+            <button class="trainer-num-btn" data-max="100">до 100</button>
+            <button class="trainer-num-btn" data-max="1000">до 1000</button>
+            <button class="trainer-num-btn" data-max="10000">до 10 000</button>  <!-- ← ДОБАВИТЬ -->
+        </div>
+        <button class="trainer-modal-cancel" data-cancel>Отмена</button>
+    </div>
+</div>
+
+<!-- Модалка: Уравнения — Выбор типа -->
+<div class="trainer-modal-overlay" id="modal-equations-type">
+    <div class="trainer-modal">
+        <h3>⚖️ Уравнения</h3>
+        <p>Выбери тип заданий:</p>
+        <div class="trainer-modal-numbers" style="flex-direction: column; gap: 10px;">
+            <button class="trainer-num-btn" data-eq-type="easy" style="width: 100%;">🟢 Простые</button>
+            <button class="trainer-num-btn" data-eq-type="hard" style="width: 100%;">🔴 Сложные</button>
+            <button class="trainer-num-btn" data-eq-type="bank" style="width: 100%;">📚 Составить уравнение</button>
+        </div>
+        <button class="trainer-modal-cancel" data-cancel>Отмена</button>
+    </div>
+</div>
+
+<!-- Модалка: Уравнения — Выбор сложности -->
+<div class="trainer-modal-overlay" id="modal-equations-level">
+    <div class="trainer-modal">
+        <h3 id="modal-eq-level-title">Уравнения</h3>
+        <p>Выбери уровень сложности:</p>
+        <div class="trainer-modal-numbers" style="flex-direction: column; gap: 10px;">
+            <button class="trainer-num-btn" data-eq-level="easy" style="width: 100%;">🟢 Простые</button>
+            <button class="trainer-num-btn" data-eq-level="hard" style="width: 100%;">🔴 Сложные</button>
+        </div>
+        <button class="trainer-modal-cancel" data-cancel>Отмена</button>
+    </div>
+</div>
+
+    <!-- ФИНАЛЬНЫЙ ЭКРАН -->
+    <div class="final-screen" id="final-screen">
+        <div class="final-wrap">
+            <h2>Раунд завершён!</h2>
+            <div class="final-stats">
+                <div class="final-stat">
+                    <span class="final-stat-num" id="final-total">0</span>
+                    <span class="final-stat-label">Всего задач</span>
+                </div>
+                <div class="final-stat ok">
+                    <span class="final-stat-num" id="final-correct">0</span>
+                    <span class="final-stat-label">Правильно</span>
+                </div>
+                <div class="final-stat err">
+                    <span class="final-stat-num" id="final-wrong">0</span>
+                    <span class="final-stat-label">Неправильно</span>
+                </div>
+            </div>
+            <div class="final-mark" id="final-mark">Оценка: —</div>
+            <div id="final-wrong-list" class="final-wrong-list"></div>
+            <button class="final-btn" id="final-back-btn">← В главное меню</button>
+        </div>
+    </div>
+
+<!-- Модалка: Единицы измерения — выбор категории -->
+<div class="trainer-modal-overlay" id="modal-units">
+    <div class="trainer-modal">
+        <h3>📏 Единицы измерения</h3>
+        <p>Что будем переводить?</p>
+        <div class="trainer-modal-numbers">
+            <button class="trainer-num-btn" data-units="length">📏 Длина</button>
+            <button class="trainer-num-btn" data-units="mass">⚖️ Масса</button>
+            <button class="trainer-num-btn" data-units="time">⏱ Время</button>
+            <button class="trainer-num-btn" data-units="area">🟦 Площадь</button>
+            <button class="trainer-num-btn" data-units="volume">🧊 Объём</button>
+            <button class="trainer-num-btn" data-units="speed">🚗 Скорость</button>
+            <button class="trainer-num-btn" data-units="mixed">🎲 Вперемешку</button>
+        </div>
+        <button class="trainer-modal-cancel" data-cancel>Отмена</button>
+    </div>
+</div>
+
+
+    <!-- ============================================= -->
+    <!-- СКРИПТЫ                                       -->
+    <!-- ============================================= -->
+
+
+    <!-- Банки задач: 1-2 класс -->
+    <script src="tasks/class1-2/01-sum.js"></script>
+    <script src="tasks/class1-2/02-increase-decrease.js"></script>
+    <script src="tasks/class1-2/03-unknown-addend.js"></script>
+    <script src="tasks/class1-2/04-remainder.js"></script>
+    <script src="tasks/class1-2/05-unknown-subtrahend-addend.js"></script>
+    <script src="tasks/class1-2/06-minuend.js"></script>
+    <script src="tasks/class1-2/07-diff-compare.js"></script>
+    <script src="tasks/class1-2/08-indirect-questions.js"></script>
+    <script src="tasks/class1-2/09-test1.js"></script>
+    <script src="tasks/class1-2/10-compound-sum.js"></script>
+    <script src="tasks/class1-2/11-compound-remainder.js"></script>
+    <script src="tasks/class1-2/12-compound-addend-subtrahend.js"></script>
+    <script src="tasks/class1-2/13-compound-third-addend.js"></script>
+    <script src="tasks/class1-2/14-compound-sum2.js"></script>
+    <script src="tasks/class1-2/15-compound-minuend.js"></script>
+    <script src="tasks/class1-2/16-compound-diff-compare.js"></script>
+    <script src="tasks/class1-2/17-test2.js"></script>
+
+    <!-- Банки задач: 3 класс -->
+    <script src="tasks/class3/01-multiplication.js"></script>
+    <script src="tasks/class3/02-increase-decrease-times.js"></script>
+    <script src="tasks/class3/03-division-parts.js"></script>
+    <script src="tasks/class3/04-multiple-comparison.js"></script>
+    <script src="tasks/class3/05-increase-decrease-times-indirect.js"></script>
+    <script src="tasks/class3/06-test3.js"></script>
+    <script src="tasks/class3/07-compound-sum.js"></script>
+    <script src="tasks/class3/08-reduction-to-unit.js"></script>
+    <script src="tasks/class3/09-compound-minuend-subtrahend-diff.js"></script>
+    <script src="tasks/class3/10-compound-diff-multiple.js"></script>
+    <script src="tasks/class3/11-test4.js"></script>
+    <script src="tasks/class3/12-compound-sum-two-products.js"></script>
+    <script src="tasks/class3/13-unknown-addend.js"></script>
+    <script src="tasks/class3/14-compound-div-sum-by-num.js"></script>
+    <script src="tasks/class3/15-price-quantity-cost.js"></script>
+    <script src="tasks/class3/16-test5.js"></script>
+    <script src="tasks/class3/17-compound-price.js"></script>
+    <script src="tasks/class3/18-test6.js"></script>
+    <script src="tasks/class3/19-perimeter-sides.js"></script>
+    <script src="tasks/class3/20-test7.js"></script>
+    <script src="tasks/class3/21-fraction-of-number.js"></script>
+    <script src="tasks/class3/22-test8.js"></script>
+
+    <!-- Банки задач: 4 класс -->
+    <script src="tasks/class4/01-motion-simple.js"></script>
+    <script src="tasks/class4/02-motion-meeting.js"></script>
+    <script src="tasks/class4/03-test9.js"></script>
+    <script src="tasks/class4/04-motion-one-direction.js"></script>
+    <script src="tasks/class4/05-test10.js"></script>
+    <script src="tasks/class4/06-motion-opposite.js"></script>
+    <script src="tasks/class4/07-test11.js"></script>
+    <script src="tasks/class4/08-proportional.js"></script>
+    <script src="tasks/class4/09-two-differences.js"></script>
+    <script src="tasks/class4/10-test12.js"></script>
+    <script src="tasks/class4/11-fractions.js"></script>
+    <script src="tasks/class4/12-test13.js"></script>
+    <script src="tasks/class4/13-area.js"></script>
+    <script src="tasks/class4/14-test14.js"></script>
+    <script src="tasks/class4/15-review.js"></script>
+
+    <!-- Тренажеры (логика) -->
+    <script src="tasks/trainers/01-multiplication.js"></script>
+    <script src="tasks/trainers/02-columns.js"></script>
+    <script src="tasks/trainers/03-division.js"></script>
+    <script src="tasks/trainers/04-units.js"></script>
+    <script src="tasks/trainers/05-rect.js"></script>
+    <script src="tasks/trainers/06-equations.js"></script>
+    <script src="tasks/trainers/07-order.js"></script>
+    <script src="tasks/trainers/08-numbers.js"></script>
+    <script src="tasks/trainers/09-clock.js"></script>
+    <script src="tasks/trainers/10-roman.js"></script>
+    <script src="tasks/trainers/equations-bank.js"></script>
+    
+    <!-- Ядро и интерфейс -->
+    <script src="tasks/solver.js"></script>
+    <script src="tasks/trainers/trainer.js"></script> 
+    <script src="tasks/progress.js"></script>
+
+    <!-- Данные старых тем -->
+    <script src="tasks/tasks1-2.js"></script>
+    <script src="tasks/tasks3.js"></script>
+    <script src="tasks/tasks4.js"></script>
+    
+    <!-- Твой главный скрипт -->
+    <script src="tasks/guide.js"></script>
+
+<!-- МОДАЛКА КОНСТРУКТОРА -->
+<div class="constructor-modal-overlay" id="constructor-modal">
+    <div class="constructor-modal">
+        <h3>🛠 Конструктор заданий</h3>
+        <p>Выбери, сколько задач решить по каждой теме:</p>
+        <div id="constructor-list" class="constructor-list">
+            <!-- Сюда скрипт вставит список -->
+        </div>
+        <div class="constructor-footer">
+            <button id="constructor-generate" class="solver-btn primary">Сгенерировать лист</button>
+            <button id="constructor-close" class="trainer-modal-cancel">Отмена</button>
+        </div>
+    </div>
+</div>
+
+    <!-- ЭКРАН С ЛИСТОМ ЗАДАНИЙ -->
+    <div class="worksheet-screen" id="worksheet-screen">
+        <div class="worksheet-wrap">
+            <div class="worksheet-header">
+                <h2>Твой лист с заданиями 📝</h2>
+                <p class="worksheet-sub">Реши все задачи и нажми «Проверить» в самом низу</p>
+            </div>
+            <div id="worksheet-content" class="worksheet-content">
+                <!-- Сюда скрипт вставит задачи -->
+            </div>
+        </div>
+    </div>
+
+    <!-- МОДАЛКА РЕЗУЛЬТАТОВ -->
+    <div class="results-modal-overlay" id="results-modal">
+        <div class="results-modal">
+            <h3 id="results-title">Оценка</h3>
+            <p id="results-stats" style="font-size: 1.2rem; font-weight: bold; margin-bottom: 15px;"></p>
+            <div id="results-list" class="results-list"></div>
+            <button id="results-close" class="solver-btn primary" style="margin-top: 20px;">Закрыть</button>
+        </div>
+    </div>
+    <script src="tasks/script.js"></script>
+    <script src="tasks/trainers/constructor.js"></script>
+
+
+</body>
+</html>
